@@ -311,6 +311,43 @@
             margin-bottom: var(--spacing-md);
         }
 
+        .host-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 2.5rem;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+            padding: 0.7rem 1.75rem;
+            border-radius: 50px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .host-link i {
+            font-size: 1.2rem;
+            color: #f8c146;
+            transition: transform 0.4s ease;
+        }
+
+        .host-link:hover {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
+            transform: translateY(-4px) scale(1.02);
+            color: #fff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .host-link:hover i {
+            transform: scale(1.15) rotate(-10deg);
+        }
+
         @media (max-width: 768px) {
             .apply-form {
                 grid-template-columns: 1fr;
@@ -353,6 +390,9 @@
                     <h1>Ortygia Summer School</h1>
                     <h2>September 7-10, 2026</h2>
                     <p class="lead">Ortygia, Siracusa, Italy</p>
+                    <a href="https://www.ortygiabs.org" target="_blank" class="host-link">
+                        <i class="fas fa-university"></i> Hosted by Ortygia Business School
+                    </a>
                     <div class="hero-buttons">
                         <a href="#courses" class="btn btn-primary btn-lg">View Courses</a>
                         <a href="/apply" class="btn btn-secondary btn-lg">Apply Now</a>
@@ -474,6 +514,7 @@
                                 <h3>Sailing the Macro 2026</h3>
                                 <p>Summer School participants may submit to the Sailing the Macro Workshop.</p>
                                 <p>We reserve <strong>one special session</strong> specifically for Summer School participants to present their work!</p>
+                                <a href="https://sailingthemacro.org/" target="_blank" class="btn btn-outline btn-sm" style="margin-top:10px;"><i class="fas fa-external-link-alt"></i> Workshop Website</a>
                             </div>
                         </div>
                     </div>

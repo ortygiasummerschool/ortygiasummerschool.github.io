@@ -1,1 +1,1 @@
-# -ortygiasummerschool.github.io
+# ortygiasummerschool.github.io

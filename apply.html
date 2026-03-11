@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apply for the Ortygia Summer School 2026. Join our intensive macroeconomics courses in Ortigia, Italy.">
+    <meta name="author" content="Sailing the Macro">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Apply | Ortygia Summer School 2026">
+    <meta property="og:description" content="Submit your application for the Ortygia Summer School in Siracusa, Italy.">
+    <meta property="og:image" content="assets/images/swmlogo.png">
+    <meta property="og:url" content="https://sailingmacro.github.io/summer-school/apply.html">
+    <meta property="og:type" content="website">
+
+    <title>Apply - Ortygia Summer School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/swmlogo.png" type="image/png">
+    <style>
+        /* Course Specific Styling (BSE Inspired) */
+        .courses-stack {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xl);
+        }
+        
+        .course-full-card {
+            background-color: var(--bg-light);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            padding: var(--spacing-xl);
+            position: relative;
+            overflow: hidden;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .course-header {
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 2px solid var(--bg-gray);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: var(--spacing-md);
+        }
+
+        .course-title-area h3 {
+            font-size: var(--text-2xl);
+            margin-bottom: var(--spacing-xs);
+            color: var(--primary-color-dark);
+        }
+
+        .course-title-area .course-instructor {
+            font-size: var(--text-lg);
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .course-meta {
+            display: flex;
+            gap: var(--spacing-md);
+            background-color: rgba(var(--primary-color-rgb), 0.05);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--radius-md);
+        }
+
+        .course-meta-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            color: var(--primary-color-dark);
+            font-weight: 600;
+        }
+
+        .course-intro {
+            margin-bottom: var(--spacing-lg);
+            font-size: var(--text-base);
+            line-height: 1.7;
+        }
+
+        /* Summer School Accordion */
+        .ss-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+
+        .ss-accordion-item {
+            border: 1px solid var(--border-color, #e0e0e0);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: all var(--transition-fast);
+        }
+
+        .ss-accordion-header {
+            padding: var(--spacing-md) var(--spacing-lg);
+            background-color: var(--bg-gray);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-primary);
+            transition: background-color var(--transition-fast);
+        }
+
+        .ss-accordion-header:hover {
+            background-color: rgba(var(--primary-color-rgb), 0.1);
+        }
+
+        .ss-accordion-icon {
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .ss-accordion-content {
+            max-height: 0;
+            padding: 0 var(--spacing-lg);
+            background-color: var(--bg-light);
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+        }
+
+        .ss-accordion-item.active {
+            border-color: var(--primary-color-light);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .ss-accordion-item.active .ss-accordion-header {
+            background-color: rgba(var(--primary-color-rgb), 0.05);
+            border-bottom: 1px solid var(--border-color, #e0e0e0);
+            color: var(--primary-color);
+        }
+
+        .ss-accordion-item.active .ss-accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .ss-accordion-item.active .ss-accordion-content {
+            padding: var(--spacing-md) var(--spacing-lg);
+            max-height: 800px;
+        }
+
+        .ss-accordion-content ul {
+            padding-left: var(--spacing-lg);
+            margin-bottom: 0;
+        }
+        
+        .ss-accordion-content ul li {
+            margin-bottom: var(--spacing-xs);
+        }
+        /* Custom Application Form */
+        .apply-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--bg-light);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            padding: var(--spacing-xl);
+            text-align: left;
+        }
+
+        .apply-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+            color: var(--primary-color-dark);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: 1px solid var(--border-color, #ccc);
+            border-radius: var(--radius-md);
+            font-family: inherit;
+            font-size: var(--text-base);
+            transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+            background-color: #fafafa;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.2);
+            background-color: #fff;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xs);
+            margin-top: var(--spacing-xs);
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: var(--primary-color);
+        }
+
+        .checkbox-item label {
+            font-weight: normal;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+
+        .form-submit {
+            grid-column: 1 / -1;
+            margin-top: var(--spacing-md);
+            text-align: center;
+        }
+        
+        .form-submit .btn {
+            padding: var(--spacing-sm) var(--spacing-xl);
+            font-size: var(--text-lg);
+            width: 100%;
+            max-width: 300px;
+        }
+
+        /* Success Message hidden by default */
+        #form-success-msg {
+            display: none;
+            text-align: center;
+            padding: var(--spacing-xl);
+            background-color: rgba(var(--primary-color-rgb), 0.1);
+            border-radius: var(--radius-md);
+            color: var(--primary-color-dark);
+            grid-column: 1 / -1;
+        }
+        
+        #form-success-msg i {
+            font-size: 3rem;
+            color: #4CAF50;
+            margin-bottom: var(--spacing-md);
+        }
+
+        @media (max-width: 768px) {
+            .apply-form {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with sticky navigation -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html#home"><img src="assets/images/swmlogo.png" alt="Sailing Logo" class="logo-img"><span class="logo-text">Ortygia Summer School</span></a>
+                </div>
+                <nav class="main-nav">
+                    <div class="mobile-menu-icon" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                        <span><i class="fas fa-bars"></i></span>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#courses">Courses</a></li>
+                        <li><a href="index.html#info">Information</a></li>
+                        <li><a href="#apply">Apply Now</a></li>
+                    </ul>
+                </nav>
+                <div class="header-buttons">
+                    <a href="#apply" class="btn btn-primary">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content with sections -->
+    <main>
+        <!-- Apply section -->
+        <section id="apply" class="section active" style="padding-top: 150px; min-height: 100vh;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Apply Now</h2>
+                    <p>Secure your spot in the Ortygia Summer School.</p>
+                </div>
+                <div class="section-content">
+                    <div class="apply-container">
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                        <!-- Custom HTML Form targeting Google Forms endpoint -->
+                        <form id="summer-school-form" class="apply-form" action="https://docs.google.com/forms/d/e/1FAIpQLSerdHmYZ9d8xxExQe_1twemK8zlljO4I-9ulROQvvonwdRR2g/formResponse" method="POST" target="hidden_iframe">
+                            
+                            <div class="form-group">
+                                <label for="first-name">First Name *</label>
+                                <input type="text" id="first-name" name="entry.2136093437" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="last-name">Last Name *</label>
+                                <input type="text" id="last-name" name="entry.2069151197" required>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="entry.829133630" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="affiliation">Institution / Affiliation *</label>
+                                <input type="text" id="affiliation" name="entry.2000540149" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="position">Position *</label>
+                                <select id="position" name="entry.2047449435" required>
+                                    <option value="" disabled selected>Select your position</option>
+                                    <option value="Academic / Faculty">Academic / Faculty</option>
+                                    <option value="PhD Student">PhD Student</option>
+                                    <option value="PhD from Sapienza (Free)">PhD from Sapienza (Free)</option>
+                                    <option value="Institution / Profes">Institution / Professional</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Which valid courses are you applying for? *</label>
+                                <p style="font-size: 0.9em; color: var(--text-secondary); margin-bottom: 0.5rem;">Select all that apply. 20% discount if you sign up for 2 courses.</p>
+                                <div class="checkbox-group" id="dynamic-course-checkboxes">
+                                    <!-- Courses loaded dynamically via JSON -->
+                                    <div class="checkbox-item"><p style="font-size:0.9em;color:gray;"><i class="fas fa-spinner fa-spin"></i> Loading courses...</p></div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="form-group full-width">
+                                <label for="comments">Additional Comments or Questions (Optional)</label>
+                                <textarea id="comments" name="entry.1042283375" rows="4"></textarea>
+                            </div>
+
+                            <div class="form-submit">
+                                <button type="submit" class="btn btn-primary">Submit Application</button>
+                            </div>
+                            
+                            <!-- Success Message -->
+                            <div id="form-success-msg">
+                                <i class="fas fa-check-circle"></i>
+                                <h3>Thank You for Applying!</h3>
+                                <p>We have successfully received your application. We will be in touch with you shortly via email with the next steps.</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Ortygia Summer School</h3>
+                    <p>September 7-10, 2026</p>
+                    <p>Ortigia, Italy</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html#home">Home</a></li>
+                            <li><a href="index.html#courses">Courses</a></li>
+                            <li><a href="index.html#info">Information</a></li>
+                            <li><a href="#apply">Apply</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Ortygia Summer School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            
+            // Dynamic Course Checkboxes
+            try {
+                const response = await fetch('courses.json');
+                const courses = await response.json();
+                const checkboxContainer = document.getElementById('dynamic-course-checkboxes');
+                
+                checkboxContainer.innerHTML = ''; // clear loading spinner
+
+                courses.forEach((course, index) => {
+                    const id = `course-${index}`;
+                    const customValue = `${course.title} (${course.date} | ${course.instructor})`;
+                    const html = `
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="${id}" name="entry.1273626264" value="${customValue}">
+                            <label for="${id}">${course.title} <span style="font-weight:400; color:var(--text-secondary);">(${course.date} | ${course.instructor})</span></label>
+                        </div>
+                    `;
+                    checkboxContainer.innerHTML += html;
+                });
+            } catch (error) {
+                console.error("Error loading courses:", error);
+                document.getElementById('dynamic-course-checkboxes').innerHTML = '<p style="color:red;">Error loading courses. Please refresh the page.</p>';
+            }
+
+            // Interactive Form Handling
+            let submitted = false;
+            const form = document.getElementById('summer-school-form');
+            const successMsg = document.getElementById('form-success-msg');
+            const iframe = document.getElementById('hidden_iframe');
+
+            form.addEventListener('submit', function(e) {
+                // Ensure at least one course is selected!
+                const checkedCourses = form.querySelectorAll('input[name="entry.1273626264"]:checked');
+                if (checkedCourses.length === 0) {
+                    e.preventDefault(); // Stop submission
+                    alert('Please select at least one course.');
+                    return;
+                }
+
+                submitted = true;
+                const submitBtn = form.querySelector('button[type="submit"]');
+                submitBtn.innerText = 'Submitting...';
+                submitBtn.disabled = true;
+            });
+
+            iframe.addEventListener('load', function() {
+                if (submitted) {
+                    Array.from(form.children).forEach(child => {
+                        if(child.id !== 'form-success-msg') {
+                            child.style.display = 'none';
+                        }
+                    });
+                    successMsg.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

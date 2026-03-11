@@ -1,0 +1,46 @@
+[
+  {
+    "tabId": "tab-week1",
+    "title": "HANK Models",
+    "instructor": "Cristiano Cantore",
+    "date": "Sept 7-8",
+    "time": "6 hrs",
+    "overview": "Overview Placeholder...",
+    "learningOutcomes": "Outcomes Placeholder...",
+    "topics": ["Topic 1", "Topic 2", "Topic 3"],
+    "references": ["Reference 1"]
+  },
+  {
+    "tabId": "tab-week1",
+    "title": "Empirical Macroeconomic",
+    "instructor": "Massimiliano Tancioni",
+    "date": "Sept 7-8",
+    "time": "6 hrs",
+    "overview": "Overview Placeholder...",
+    "learningOutcomes": "Outcomes Placeholder...",
+    "topics": ["Topic 1", "Topic 2"],
+    "references": ["Reference 1"]
+  },
+  {
+    "tabId": "tab-week2",
+    "title": "Advances in Macroeconomics",
+    "instructor": "Salvatore Nisticò",
+    "date": "Sept 9-10",
+    "time": "6 hrs",
+    "overview": "Overview Placeholder...",
+    "learningOutcomes": "Outcomes Placeholder...",
+    "topics": ["Topic 1", "Topic 2"],
+    "references": ["Reference 1"]
+  },
+  {
+    "tabId": "tab-week2",
+    "title": "Econometrics",
+    "instructor": "Giuseppe Ragusa",
+    "date": "Sept 9-10",
+    "time": "6 hrs",
+    "overview": "Overview Placeholder...",
+    "learningOutcomes": "Outcomes Placeholder...",
+    "topics": ["Topic 1", "Topic 2"],
+    "references": ["Reference 1"]
+  }
+]

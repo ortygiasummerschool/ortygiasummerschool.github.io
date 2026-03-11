@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ortigia Summer School - Four intensive courses covering advanced topics in macroeconomics. Sept 7-10, 2026 in Siracusa, Italy.">
+    <meta name="author" content="Sailing the Macro">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Ortigia Summer School 2026">
+    <meta property="og:description" content="Intensive advanced macroeconomics courses in Ortigia, Italy (Sept 7-10, 2026).">
+    <meta property="og:image" content="assets/images/swmlogo.png">
+    <meta property="og:url" content="https://sailingmacro.github.io/summer-school/">
+    <meta property="og:type" content="website">
+
+    <title>Ortigia Summer School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/swmlogo.png" type="image/png">
+    <style>
+        /* Course Specific Styling (BSE Inspired) */
+        .courses-stack {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xl);
+        }
+        
+        .course-full-card {
+            background-color: var(--bg-light);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            padding: var(--spacing-xl);
+            position: relative;
+            overflow: hidden;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .course-header {
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 2px solid var(--bg-gray);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: var(--spacing-md);
+        }
+
+        .course-title-area h3 {
+            font-size: var(--text-2xl);
+            margin-bottom: var(--spacing-xs);
+            color: var(--primary-color-dark);
+        }
+
+        .course-title-area .course-instructor {
+            font-size: var(--text-lg);
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* Lecturers Section Customizations */
+        .lecturers-section-wrapper {
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(26, 82, 118, 0.15); /* elegant subtle line */
+            width: 100%;
+        }
+
+        .lecturers-title {
+            text-align: center;
+            font-size: var(--text-3xl);
+            color: var(--primary-color-dark);
+            margin-bottom: 2.5rem;
+            font-weight: 700;
+        }
+
+        .lecturers-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            width: 100%;
+        }
+        
+        .lecturers-grid .speaker-card {
+            background-color: #fff;
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .lecturers-grid .speaker-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+
+        @media (max-width: 991px) {
+            .lecturers-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 575px) {
+            .lecturers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .course-meta {
+            display: flex;
+            gap: var(--spacing-md);
+            background-color: rgba(var(--primary-color-rgb), 0.05);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--radius-md);
+        }
+
+        .course-meta-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            color: var(--primary-color-dark);
+            font-weight: 600;
+        }
+
+        .course-intro {
+            margin-bottom: var(--spacing-lg);
+            font-size: var(--text-base);
+            line-height: 1.7;
+        }
+
+        /* Summer School Accordion */
+        .ss-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+
+        .ss-accordion-item {
+            border: 1px solid var(--border-color, #e0e0e0);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: all var(--transition-fast);
+        }
+
+        .ss-accordion-header {
+            padding: var(--spacing-md) var(--spacing-lg);
+            background-color: var(--bg-gray);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-primary);
+            transition: background-color var(--transition-fast);
+        }
+
+        .ss-accordion-header:hover {
+            background-color: rgba(var(--primary-color-rgb), 0.1);
+        }
+
+        .ss-accordion-icon {
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .ss-accordion-content {
+            max-height: 0;
+            padding: 0 var(--spacing-lg);
+            background-color: var(--bg-light);
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+        }
+
+        .ss-accordion-item.active {
+            border-color: var(--primary-color-light);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .ss-accordion-item.active .ss-accordion-header {
+            background-color: rgba(var(--primary-color-rgb), 0.05);
+            border-bottom: 1px solid var(--border-color, #e0e0e0);
+            color: var(--primary-color);
+        }
+
+        .ss-accordion-item.active .ss-accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .ss-accordion-item.active .ss-accordion-content {
+            padding: var(--spacing-md) var(--spacing-lg);
+            max-height: 800px;
+        }
+
+        .ss-accordion-content ul {
+            padding-left: var(--spacing-lg);
+            margin-bottom: 0;
+        }
+        
+        .ss-accordion-content ul li {
+            margin-bottom: var(--spacing-xs);
+        }
+        /* Custom Application Form */
+        .apply-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--bg-light);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            padding: var(--spacing-xl);
+            text-align: left;
+        }
+
+        .apply-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+            color: var(--primary-color-dark);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: 1px solid var(--border-color, #ccc);
+            border-radius: var(--radius-md);
+            font-family: inherit;
+            font-size: var(--text-base);
+            transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+            background-color: #fafafa;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.2);
+            background-color: #fff;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xs);
+            margin-top: var(--spacing-xs);
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: var(--primary-color);
+        }
+
+        .checkbox-item label {
+            font-weight: normal;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+
+        .form-submit {
+            grid-column: 1 / -1;
+            margin-top: var(--spacing-md);
+            text-align: center;
+        }
+        
+        .form-submit .btn {
+            padding: var(--spacing-sm) var(--spacing-xl);
+            font-size: var(--text-lg);
+            width: 100%;
+            max-width: 300px;
+        }
+
+        /* Success Message hidden by default */
+        #form-success-msg {
+            display: none;
+            text-align: center;
+            padding: var(--spacing-xl);
+            background-color: rgba(var(--primary-color-rgb), 0.1);
+            border-radius: var(--radius-md);
+            color: var(--primary-color-dark);
+            grid-column: 1 / -1;
+        }
+        
+        #form-success-msg i {
+            font-size: 3rem;
+            color: #4CAF50;
+            margin-bottom: var(--spacing-md);
+        }
+
+        @media (max-width: 768px) {
+            .apply-form {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with sticky navigation -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="#home"><img src="assets/images/swmlogo.png" alt="Sailing Logo" class="logo-img"><span class="logo-text">Ortigia Summer School</span></a>
+                </div>
+                <nav class="main-nav">
+                    <div class="mobile-menu-icon" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                        <span><i class="fas fa-bars"></i></span>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#info">Information</a></li>
+                        <li><a href="apply.html">Apply Now</a></li>
+                    </ul>
+                </nav>
+                <div class="header-buttons">
+                    <a href="apply.html" class="btn btn-primary">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content with sections -->
+    <main>
+        <!-- Home section -->
+        <section id="home" class="section active">
+            <div class="container">
+                <div class="hero">
+                    <h1>Ortigia Summer School</h1>
+                    <h2>September 7-10, 2026</h2>
+                    <p class="lead">Ortigia, Siracusa, Italy</p>
+                    <div class="hero-buttons">
+                        <a href="#courses" class="btn btn-primary btn-lg">View Courses</a>
+                        <a href="apply.html" class="btn btn-secondary btn-lg">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Lecturers Section -->
+                <div class="lecturers-section-wrapper">
+                    <h3 class="lecturers-title">Lecturers</h3>
+                    <div class="lecturers-grid">
+                        <div class="speaker-card">
+                            <div class="speaker-image">
+                                <img src="assets/keynotes/Massimiliano Tancioni.png" alt="Massimiliano Tancioni" loading="lazy" onerror="this.src='assets/images/swmlogo.png'; this.style.objectFit='contain'; this.style.padding='20px';">
+                            </div>
+                            <h4>Massimiliano Tancioni</h4>
+                            <p class="speaker-title">Sapienza University of Rome</p>
+                        </div>
+                        <div class="speaker-card">
+                            <div class="speaker-image">
+                                <img src="assets/keynotes/Cristiano Cantore.png" alt="Cristiano Cantore" loading="lazy" onerror="this.src='assets/images/swmlogo.png'; this.style.objectFit='contain'; this.style.padding='20px';">
+                            </div>
+                            <h4>Cristiano Cantore</h4>
+                            <p class="speaker-title">Sapienza University of Rome</p>
+                        </div>
+                        <div class="speaker-card">
+                            <div class="speaker-image">
+                                <img src="assets/keynotes/Salvatore Nistico.png" alt="Salvatore Nisticò" loading="lazy" onerror="this.src='assets/images/swmlogo.png'; this.style.objectFit='contain'; this.style.padding='20px';">
+                            </div>
+                            <h4>Salvatore Nisticò</h4>
+                            <p class="speaker-title">Sapienza University of Rome</p>
+                        </div>
+                        <div class="speaker-card">
+                            <div class="speaker-image">
+                                <img src="assets/keynotes/Giusepe Ragusa.png" alt="Giuseppe Ragusa" loading="lazy" onerror="this.src='assets/images/swmlogo.png'; this.style.objectFit='contain'; this.style.padding='20px';">
+                            </div>
+                            <h4>Giuseppe Ragusa</h4>
+                            <p class="speaker-title">Sapienza University of Rome</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses section -->
+        <section id="courses" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Courses</h2>
+                    <p>Four intensive courses covering advanced topics in macroeconomics.</p>
+                </div>
+                <div class="section-content">
+                                        <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="tab-week1" onclick="switchTab(this, 'tab-week1')"><i class="far fa-calendar-alt"></i> Sept 7-8</button>
+                        <button class="tab-btn" data-tab="tab-week2" onclick="switchTab(this, 'tab-week2')"><i class="far fa-calendar-alt"></i> Sept 9-10</button>
+                    </div>
+                    
+                    <div id="tab-week1" class="tab-content active courses-stack">
+                        <!-- JS injected courses will go here -->
+                    </div>
+                    <div id="tab-week2" class="tab-content courses-stack" style="display:none;">
+                        <!-- JS injected courses will go here -->
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Information section -->
+        <section id="info" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Information & Logistics</h2>
+                    <p>Everything you need to know about attending the Summer School</p>
+                </div>
+                <div class="section-content">
+                    <div class="info-cards-container">
+                        <div class="info-grid">
+                            <!-- Venue Card -->
+                            <div class="info-card venue-card">
+                                <div class="card-spotlight"></div>
+                                <div class="info-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <h3>Venue</h3>
+                                <div class="venue-details">
+                                    <p><strong>Fondazione Ortigia</strong><br>Via Roma 124<br>96100 Siracusa, Italy</p>
+                                    <a href="../assets/pdfs/welcomeguide.pdf" target="_blank" class="btn btn-outline btn-sm" style="margin-top:10px;"><i class="fas fa-file-pdf"></i> Venue Guide</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Fees Card -->
+                            <div class="info-card">
+                                <div class="card-spotlight"></div>
+                                <div class="info-icon">
+                                    <i class="fas fa-euro-sign"></i>
+                                </div>
+                                <h3>Tuition & Fees</h3>
+                                <p><strong>Academics:</strong> €550 per course<br>
+                                <strong>Institutions:</strong> €1100 per course</p>
+                            </div>
+
+                            <!-- Discounts Card -->
+                            <div class="info-card">
+                                <div class="card-spotlight"></div>
+                                <div class="info-icon">
+                                    <i class="fas fa-tags"></i>
+                                </div>
+                                <h3>Discounts</h3>
+                                <p><strong>Multi-Course:</strong> 20% discount if you sign up for 2 courses.</p>
+                                <p><strong>Sapienza PhDs:</strong> Students from Sapienza can attend free of charge.</p>
+                            </div>
+
+                            <!-- Conference Tie-in -->
+                            <div class="info-card">
+                                <div class="card-spotlight"></div>
+                                <div class="info-icon">
+                                    <i class="fas fa-ship"></i>
+                                </div>
+                                <h3>Sailing the Macro 2026</h3>
+                                <p>Summer School participants may submit to the Sailing the Macro Workshop.</p>
+                                <p>We reserve <strong>one special session</strong> specifically for Summer School participants to present their work!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Ortigia Summer School</h3>
+                    <p>September 7-10, 2026</p>
+                    <p>Ortigia, Italy</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#courses">Courses</a></li>
+                            <li><a href="#info">Information</a></li>
+                            <li><a href="apply.html">Apply</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Ortigia Summer School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const response = await fetch('courses.json');
+                const courses = await response.json();
+                
+                const week1Container = document.getElementById('tab-week1');
+                const week2Container = document.getElementById('tab-week2');
+                
+                courses.forEach(course => {
+                    const topicsHtml = course.topics.map(t => `<li>${t}</li>`).join('');
+                    const referencesHtml = course.references.map(r => `<li>${r}</li>`).join('');
+                    
+                    const courseHtml = `
+                        <div class="course-full-card">
+                            <div class="course-header">
+                                <div class="course-title-area">
+                                    <h3>${course.title}</h3>
+                                    <div class="course-instructor">Instructor: ${course.instructor}</div>
+                                </div>
+                                <div class="course-meta">
+                                    <div class="course-meta-item"><i class="far fa-calendar-alt"></i> ${course.date}</div>
+                                    <div class="course-meta-item"><i class="far fa-clock"></i> ${course.time}</div>
+                                </div>
+                            </div>
+                            <div class="course-intro">
+                                <strong>Course Overview:</strong> ${course.overview}
+                            </div>
+                            <div class="ss-accordion">
+                                <div class="ss-accordion-item">
+                                    <div class="ss-accordion-header">Learning Outcomes<i class="fas fa-chevron-down ss-accordion-icon"></i></div>
+                                    <div class="ss-accordion-content"><p style="padding-top: var(--spacing-md);">${course.learningOutcomes}</p></div>
+                                </div>
+                                <div class="ss-accordion-item">
+                                    <div class="ss-accordion-header">Key Topics<i class="fas fa-chevron-down ss-accordion-icon"></i></div>
+                                    <div class="ss-accordion-content">
+                                        <ul style="padding-top: var(--spacing-md);">${topicsHtml}</ul>
+                                    </div>
+                                </div>
+                                <div class="ss-accordion-item">
+                                    <div class="ss-accordion-header">List of References<i class="fas fa-chevron-down ss-accordion-icon"></i></div>
+                                    <div class="ss-accordion-content">
+                                        <ul style="padding-top: var(--spacing-md);">${referencesHtml}</ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    if (course.tabId === 'tab-week1') {
+                        week1Container.innerHTML += courseHtml;
+                    } else if (course.tabId === 'tab-week2') {
+                        week2Container.innerHTML += courseHtml;
+                    }
+                });
+
+                // Attach accordion events after courses are loaded
+                const accordions = document.querySelectorAll('.ss-accordion-header');
+                accordions.forEach(acc => {
+                    acc.addEventListener('click', () => {
+                        const item = acc.parentElement;
+                        const isActive = item.classList.contains('active');
+                        
+                        document.querySelectorAll('.ss-accordion-item').forEach(i => i.classList.remove('active'));
+                        
+                        if (!isActive) {
+                            item.classList.add('active');
+                        }
+                    });
+                });
+
+            } catch (error) {
+                console.error('Error loading courses:', error);
+            }
+        });
+
+        function switchTab(btn, tabId) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => {
+                c.classList.remove('active');
+                c.style.display = 'none';
+            });
+            
+            btn.classList.add('active');
+            const target = document.getElementById(tabId);
+            target.classList.add('active');
+            target.style.display = 'flex'; // our courses-stack is a flex container
+        }
+    </script>
+</body>
+</html>

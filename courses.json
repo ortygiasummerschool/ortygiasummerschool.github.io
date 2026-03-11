@@ -23,14 +23,40 @@
   },
   {
     "tabId": "tab-week2",
-    "title": "Advances in Macroeconomics",
+    "title": "Balance Sheet Policies in DGE Models",
     "instructor": "Salvatore Nisticò",
     "date": "Sept 9-10",
     "time": "6 hrs",
-    "overview": "Overview Placeholder...",
-    "learningOutcomes": "Outcomes Placeholder...",
-    "topics": ["Topic 1", "Topic 2"],
-    "references": ["Reference 1"]
+    "overview": "This course examines modern monetary economics with a focus on the interaction between fiscal policy, central bank balance sheets, and macroeconomic dynamics in Dynamic General Equilibrium environments. It begins with the theoretical foundations of dynamic macroeconomic models, including the inter-temporal budget constraint and the transversality condition, which underpin government solvency and asset pricing. The course then explores the Fiscal Theory of the Price Level and Wallace neutrality to understand how the composition and valuation of government liabilities can influence price determination and the effectiveness of monetary policy. Building on these foundations, the course analyzes the role of unconventional monetary policy tools—such as large-scale asset purchases and helicopter money—and examines the conditions under which such policies may break neutrality results. Finally, the course studies monetary transmission in heterogeneous-agent frameworks, particularly Tractable HANK models, and investigates how balance-sheet adjustments and deleveraging during financial crises affect aggregate demand, financial stability, and policy effectiveness.",
+    "learningOutcomes": "By the end of the course, students should be able to:<br><ul><li>Derive and interpret the inter-temporal budget constraint and the transversality condition in dynamic macroeconomic models.</li><li>Analyze the implications of the transversality condition for price level determination within the Fiscal Theory of the Price Level, and understand the critique to the FTPL.</li><li>Explain the Wallace irrelevance proposition and identify the assumptions under which open market operations are irrelevant.</li><li>Evaluate the mechanisms through which unconventional open market operations and central bank balance-sheet policies can affect the macroeconomy.</li><li>Distinguish helicopter money from other forms of monetary and fiscal policy and assess its theoretical and policy implications.</li><li>Understand the structure and policy transmission mechanisms of heterogeneous-agent New Keynesian models, particularly T-HANK frameworks.</li><li>Analyze how financial frictions, leverage, and balance-sheet adjustments shape macroeconomic outcomes during deleveraging crises.</li><li>Critically assess the interaction between monetary policy, fiscal policy, and financial stability in modern macroeconomic environments.</li></ul>",
+    "topics": [
+      "Transversality condition and the inter-temporal budget constraint",
+      "Fiscal Theory of the Price Level",
+      "Wallace Irrelevance",
+      "(Non-) Neutrality of Unconventional Open Market Operations",
+      "Helicopter Money",
+      "Unconventional Monetary Policy in a T-HANK environment",
+      "Balance-sheet response to deleveraging crises"
+    ],
+    "references": [
+      "Benigno, P. (2025). <i>Monetary Economics and Policy: A Foundation for Modern Currency Systems</i>. Princeton University Press.",
+      "Benigno, P. and S. Nisticò, (2020). \"Non-Neutrality of Open Market Operations,\" <i>American Economic Journal: Macroeconomics</i>, 12(3): 175-226.",
+      "Benigno, P. and S. Nisticò, (2025). \"The Economics of Helicopter Money,\" <i>Journal of Monetary Economics</i>, 103768.",
+      "Benigno, P., G. Eggertsson and F. Romei. (2020). \"Dynamic Debt Deleveraging and Optimal Monetary Policy,\" <i>American Economic Journal: Macroeconomics</i>, 12(2): 310-350.",
+      "Willem H. Buiter, (2002). \"The Fiscal Theory Of The Price Level: A Critique,\" <i>Economic Journal</i>, 112(481): 459-480.",
+      "Chamley, C. and Polemarchakis, H., (1984). \"Assets, General Equilibrium and the Neutrality of Money,\" <i>Review of Economic Studies</i>, 51(1): 129-138.",
+      "Cochrane, J. H., (1998). \"A Frictionless View of U.S. Inflation.\" <i>NBER Macroeconomics Annual</i>, 13: 323-384.",
+      "Cúrdia, V. and Woodford, M., (2011). \"The Central-Bank Balance Sheet as an Instrument of Monetary Policy.\" <i>Journal of Monetary Economics</i>, 58(1): 54-79.",
+      "Gertler, M. and Karadi, P., (2011). \"A Model of Unconventional Monetary Policy.\" <i>Journal of Monetary Economics</i>, 58(1): 17-34.",
+      "Eggertsson, G. B. and Krugman, P., (2012). \"Debt, Deleveraging, and the Liquidity Trap: A Fisher-Minsky-Koo Approach.\" <i>Quarterly Journal of Economics</i>, 127(3): 1469-1513.",
+      "Leeper, E. M., (1991). \"Equilibria under 'Active' and 'Passive' Monetary and Fiscal Policies.\" <i>Journal of Monetary Economics</i>, 27(1): 129-147.",
+      "Nisticò, S. and M. Seccareccia (2022). \"Unconventional Policy and Idiosyncratic Risk,\" <i>DiSSE Working Paper No 7/2022</i>.",
+      "Sargent, T. J. and Wallace, N., (1981). \"Some Unpleasant Monetarist Arithmetic.\" <i>Federal Reserve Bank of Minneapolis Quarterly Review</i>, 5(3): 1-17.",
+      "Sims, C. (1994). \"A Simple Model for Study of the Determination of the Price Level and the Interaction of Monetary and Fiscal Policy\", <i>Economic Theory</i>, 4: 381-399.",
+      "Wallace, N., (1981). \"A Modigliani-Miller Theorem for Open-Market Operations.\" <i>American Economic Review</i>, 71(3): 267-274.",
+      "Woodford, M., (1995). \"Price-Level Determinacy without Control of a Monetary Aggregate.\" <i>Carnegie-Rochester Conference Series on Public Policy</i>, 43(1): 1-46.",
+      "Woodford, M. (2003). <i>Interest and Prices: Foundations of a Theory of Monetary Policy</i>. Princeton University Press."
+    ]
   },
   {
     "tabId": "tab-week2",

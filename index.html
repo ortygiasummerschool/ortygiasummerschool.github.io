@@ -126,6 +126,7 @@
             margin-bottom: var(--spacing-lg);
             font-size: var(--text-base);
             line-height: 1.7;
+            text-align: justify;
         }
 
         /* Summer School Accordion */
@@ -194,6 +195,7 @@
         .ss-accordion-content ul {
             padding-left: var(--spacing-lg);
             margin-bottom: 0;
+            list-style-type: disc;
         }
         
         .ss-accordion-content ul li {
@@ -407,7 +409,7 @@
                         <button class="tab-btn" data-tab="tab-week2" onclick="switchTab(this, 'tab-week2')"><i class="far fa-calendar-alt"></i> Sept 9-10</button>
                     </div>
                     
-                    <div id="tab-week1" class="tab-content active courses-stack">
+                    <div id="tab-week1" class="tab-content active courses-stack" style="display:flex;">
                         <!-- JS injected courses will go here -->
                     </div>
                     <div id="tab-week2" class="tab-content courses-stack" style="display:none;">

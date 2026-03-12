@@ -861,8 +861,11 @@
                     });
 
                     dayDiv.innerHTML = `
-                        <div class="calendar-day-header"><i class="far fa-calendar-alt"></i> ${dayLabel}</div>
-                        <div class="calendar-events">
+                        <div class="calendar-day-header" style="cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="const evts = this.nextElementSibling; const icon = this.querySelector('i.toggle-icon'); if (evts.style.display === 'none') { evts.style.display = 'block'; icon.className = 'fas fa-chevron-up toggle-icon'; } else { evts.style.display = 'none'; icon.className = 'fas fa-chevron-down toggle-icon'; }">
+                            <span><i class="far fa-calendar-alt"></i> ${dayLabel}</span>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="calendar-events" style="display: none;">
                             ${eventsHtml}
                         </div>
                     `;

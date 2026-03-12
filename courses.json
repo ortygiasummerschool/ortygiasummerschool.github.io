@@ -1,14 +1,37 @@
 [
   {
     "tabId": "tab-week1",
-    "title": "HANK Models",
+    "title": "Monetary and Fiscal Policy in HANK",
     "instructor": "Cristiano Cantore",
     "date": "Sept 7-8",
     "time": "6 hrs",
-    "overview": "Overview Placeholder...",
-    "learningOutcomes": "Outcomes Placeholder...",
-    "topics": ["Topic 1", "Topic 2", "Topic 3"],
-    "references": ["Reference 1"]
+    "overview": "This intensive course introduces graduate students, academics, and practitioners to the analysis of monetary and fiscal policy in heterogeneous-agent New Keynesian (HANK) models. The course explores the empirical and theoretical motivations for moving beyond representative-agent frameworks in macroeconomic policy analysis and focuses on the core policy mechanisms, the interpretation of model results, and the comparison between quantitative HANK models and tractable alternatives such as TANK (two-agents NK model) and THANK (tractable HANK model). The course combines intuition, analytical structure, quantitative analysis, and policy applications. Participants will study how heterogeneity in marginal propensities to consume, balance-sheet positions, and income risk changes the transmission of interest-rate policy, transfers, taxation, and government spending. The course also highlights when tractable models can deliver useful policy insights and when a full quantitative HANK framework is needed.",
+    "learningOutcomes": "By the end of the course, participants will be able to:<ul><li>Explain why household heterogeneity matters for the transmission of monetary and fiscal policy.</li><li>Identify and interpret the main HANK transmission channels, including redistribution, cash-flow, and earnings-heterogeneity mechanisms.</li><li>Assess how transfers, taxes, government spending, and interest-rate changes affect aggregate demand in the presence of heterogeneous households.</li><li>Understand the structure of a quantitative HANK model and the logic of sequence-space Jacobian methods used to solve and analyze it.</li><li>Solve a canonical one-asset HANK model in Python and interpret its quantitative policy implications.</li><li>Compare the insights from HANK, TANK, and THANK models and evaluate when tractable approaches are sufficient for policy analysis.</li><li>Connect model-based insights to current research and real-world policy questions faced by central banks, finance ministries, and other institutions.</li></ul>",
+    "topics": [
+      "Empirical motivation for HANK: heterogeneity in income, assets, debt positions, and marginal propensities to consume.",
+      "Monetary policy transmission with heterogeneous agents: redistribution, intertemporal substitution, cash-flow effects, and balance-sheet channels.",
+      "Fiscal policy in HANK: transfers, taxes, government spending, automatic stabilizers, and fiscal multipliers.",
+      "Sufficient-statistics and sequence-space perspectives on policy transmission.",
+      "The anatomy of a quantitative HANK model: household block, incomplete markets, nominal rigidities, and equilibrium.",
+      "Reading and interpreting impulse responses and policy counterfactuals in quantitative HANK applications.",
+      "Tractable heterogeneity: TANK and THANK models as analytical benchmarks.",
+      "When tractable models are enough, and when a richer quantitative HANK framework is required."
+    ],
+    "references": [
+      "Auclert, A. (2019). Monetary Policy and the Redistribution Channel. American Economic Review, 109(6), 2333-2367.",
+      "Auclert, A. (2025). HANK: A New Core of Usable Macroeconomics. AEA Papers and Proceedings, 115, 153-157.",
+      "Auclert, A., Bardóczy, B., Rognlie, M., & Straub, L. (2021). Using the Sequence-Space Jacobian to Solve and Estimate Heterogeneous-Agent Models. Econometrica, 89(5), 2375-2408.",
+      "Auclert, A., Rognlie, M., & Straub, L. (2024). The Intertemporal Keynesian Cross. Journal of Political Economy, 132(12), 4068-4121.",
+      "Auclert, A., Rognlie, M., & Straub, L. (2025). Fiscal and Monetary Policy with Heterogeneous Agents. Annual Review of Economics, 17, 539-562.",
+      "Bilbiie, F. O. (2008). Limited Asset Markets Participation, Monetary Policy and (Inverted) Aggregate Demand Logic. Journal of Economic Theory, 140(1), 162-196.",
+      "Bilbiie, F. O. (2025). Monetary Policy and Heterogeneity: An Analytical Framework. Review of Economic Studies, 92(4), 2398-2436.",
+      "Cantore, C., & Freund, L. B. (2021). Workers, Capitalists, and the Government: Fiscal Policy and Income (Re)distribution. Journal of Monetary Economics, 119, 58-74.",
+      "Debortoli, D., & Galí, J. (2024). Idiosyncratic Income Risk and Aggregate Fluctuations. American Economic Journal: Macroeconomics, 16(4), 279-310.",
+      "Debortoli, D., & Galí, J. (2025). Heterogeneity and Aggregate Fluctuations: Insights from TANK Models. In NBER Macroeconomics Annual 2024, Volume 39 (pp. 307-357). University of Chicago Press.",
+      "Kaplan, G., Moll, B., & Violante, G. L. (2018). Monetary Policy According to HANK. American Economic Review, 108(3), 697-743.",
+      "Kaplan, G., & Violante, G. L. (2018). Microeconomic Heterogeneity and Macroeconomic Shocks. Journal of Economic Perspectives, 32(3), 167-194.",
+      "Ravn, M. O., & Sterk, V. (2021). Macroeconomic Fluctuations with HANK & SAM: An Analytical Approach. Journal of the European Economic Association, 19(2), 1162-1202."
+    ]
   },
   {
     "tabId": "tab-week1",

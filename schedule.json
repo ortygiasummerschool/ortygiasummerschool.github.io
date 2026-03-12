@@ -1,0 +1,162 @@
+[
+  {
+    "date": "sept7",
+    "dateLabel": "Monday, Sept 7",
+    "time": "09:00 - 10:30",
+    "courseId": "cantore",
+    "courseName": "HANK Models",
+    "instructor": "Cristiano Cantore",
+    "topic": "Why HANK?",
+    "description": "Compressed foundations from the original Week 1: empirical motivation, heterogeneity in MPCs and balance sheets, and why representative-agent frameworks miss key policy mechanisms."
+  },
+  {
+    "date": "sept7",
+    "dateLabel": "Monday, Sept 7",
+    "time": "11:00 - 12:30",
+    "courseId": "cantore",
+    "courseName": "HANK Models",
+    "instructor": "Cristiano Cantore",
+    "topic": "Monetary policy transmission.",
+    "description": "Auclert-style decomposition of transmission channels, redistribution and exposure effects, and the intertemporal Keynesian cross."
+  },
+  {
+    "date": "sept7",
+    "dateLabel": "Monday, Sept 7",
+    "time": "14:00 - 15:30",
+    "courseId": "cantore",
+    "courseName": "HANK Models",
+    "instructor": "Cristiano Cantore",
+    "topic": "Fiscal policy with heterogeneous agents.",
+    "description": "Transfers, taxes, government spending, fiscal multipliers, and distributional incidence in HANK environments."
+  },
+  {
+    "date": "sept7",
+    "dateLabel": "Monday, Sept 7",
+    "time": "16:00 - 17:30",
+    "courseId": "cantore",
+    "courseName": "HANK Models",
+    "instructor": "Cristiano Cantore",
+    "topic": "Hands-on Python: solving a canonical one-asset HANK model.",
+    "description": "Guided implementation of the core building blocks of the canonical model, sequence-space intuition, and interpretation of model-based impulse responses and policy counterfactuals."
+  },
+  {
+    "date": "sept8",
+    "dateLabel": "Tuesday, Sept 8",
+    "time": "09:00 - 10:30",
+    "courseId": "cantore",
+    "courseName": "HANK Models",
+    "instructor": "Cristiano Cantore",
+    "topic": "Tractable heterogeneity.",
+    "description": "From TANK to THANK: analytical frameworks that capture key heterogeneity channels while remaining transparent and portable."
+  },
+  {
+    "date": "sept8",
+    "dateLabel": "Tuesday, Sept 8",
+    "time": "11:00 - 12:30",
+    "courseId": "cantore",
+    "courseName": "HANK Models",
+    "instructor": "Cristiano Cantore",
+    "topic": "Monetary policy in THANK.",
+    "description": "Policy intuition, amplification and redistribution, forward guidance, and comparison with quantitative HANK results."
+  },
+  {
+    "date": "sept8",
+    "dateLabel": "Tuesday, Sept 8",
+    "time": "14:00 - 15:30",
+    "courseId": "cantore",
+    "courseName": "HANK Models",
+    "instructor": "Cristiano Cantore",
+    "topic": "Fiscal policy in THANK and HANK.",
+    "description": "Comparing tax, transfer, and spending experiments across tractable and quantitative models."
+  },
+  {
+    "date": "sept8",
+    "dateLabel": "Tuesday, Sept 8",
+    "time": "16:00 - 17:30",
+    "courseId": "cantore",
+    "courseName": "HANK Models",
+    "instructor": "Cristiano Cantore",
+    "topic": "Policy use and research frontier.",
+    "description": "When HANK is worth the extra complexity, when tractable models are enough, and how the framework can be used by researchers and policy institutions."
+  },
+  {
+    "date": "sept9",
+    "dateLabel": "Wednesday, Sept 9",
+    "time": "09:00 - 10:30",
+    "courseId": "nistico",
+    "courseName": "Balance Sheet Policies",
+    "instructor": "Salvatore Nisticò",
+    "topic": "Session 1",
+    "description": "Detailed syllabus schedule to be uploaded."
+  },
+  {
+    "date": "sept9",
+    "dateLabel": "Wednesday, Sept 9",
+    "time": "11:00 - 12:30",
+    "courseId": "nistico",
+    "courseName": "Balance Sheet Policies",
+    "instructor": "Salvatore Nisticò",
+    "topic": "Session 2",
+    "description": "Detailed syllabus schedule to be uploaded."
+  },
+  {
+    "date": "sept9",
+    "dateLabel": "Wednesday, Sept 9",
+    "time": "14:00 - 15:30",
+    "courseId": "ragusa",
+    "courseName": "Econometrics",
+    "instructor": "Giuseppe Ragusa",
+    "topic": "Session 1",
+    "description": "Detailed syllabus schedule to be uploaded."
+  },
+  {
+    "date": "sept9",
+    "dateLabel": "Wednesday, Sept 9",
+    "time": "16:00 - 17:30",
+    "courseId": "ragusa",
+    "courseName": "Econometrics",
+    "instructor": "Giuseppe Ragusa",
+    "topic": "Session 2",
+    "description": "Detailed syllabus schedule to be uploaded."
+  },
+  {
+    "date": "sept10",
+    "dateLabel": "Thursday, Sept 10",
+    "time": "09:00 - 10:30",
+    "courseId": "nistico",
+    "courseName": "Balance Sheet Policies",
+    "instructor": "Salvatore Nisticò",
+    "topic": "Session 3",
+    "description": "Detailed syllabus schedule to be uploaded."
+  },
+  {
+    "date": "sept10",
+    "dateLabel": "Thursday, Sept 10",
+    "time": "11:00 - 12:30",
+    "courseId": "nistico",
+    "courseName": "Balance Sheet Policies",
+    "instructor": "Salvatore Nisticò",
+    "topic": "Session 4",
+    "description": "Detailed syllabus schedule to be uploaded."
+  },
+  {
+    "date": "sept10",
+    "dateLabel": "Thursday, Sept 10",
+    "time": "14:00 - 15:30",
+    "courseId": "ragusa",
+    "courseName": "Econometrics",
+    "instructor": "Giuseppe Ragusa",
+    "topic": "Session 3",
+    "description": "Detailed syllabus schedule to be uploaded."
+  },
+  {
+    "date": "sept10",
+    "dateLabel": "Thursday, Sept 10",
+    "time": "16:00 - 17:30",
+    "courseId": "ragusa",
+    "courseName": "Econometrics",
+    "instructor": "Giuseppe Ragusa",
+    "topic": "Session 4",
+    "description": "Detailed syllabus schedule to be uploaded."
+  }
+]

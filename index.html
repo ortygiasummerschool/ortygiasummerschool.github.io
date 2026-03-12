@@ -353,6 +353,139 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Schedule Calendar / Filter Styles */
+        .schedule-controls {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #fff;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .filter-group label {
+            font-weight: 600;
+            color: #1a5276;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        .filter-select {
+            border: none;
+            background: transparent;
+            font-size: 0.95rem;
+            color: #333;
+            outline: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        .schedule-calendar {
+            background: transparent;
+            width: 100%;
+        }
+        .calendar-day {
+            margin-bottom: 2rem;
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            border-left: 5px solid #1a5276;
+        }
+        .calendar-day-header {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1a5276;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid rgba(26, 82, 118, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .calendar-events {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .calendar-event {
+            background: #fafafa;
+            border: 1px solid rgba(0,0,0,0.06);
+            border-radius: 8px;
+            padding: 1.25rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .calendar-event:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+            background: #fff;
+        }
+        .calendar-event.hidden {
+            display: none !important;
+        }
+        .event-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .event-time-badge {
+            background: rgba(26, 82, 118, 0.1);
+            color: #1a5276;
+            padding: 0.35rem 0.75rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .event-course-badge {
+            font-size: 0.85rem;
+            color: #666;
+            background: #eee;
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        .event-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0.25rem;
+        }
+        .event-instructor {
+            font-size: 0.95rem;
+            color: #1a5276;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .event-desc {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        @media (max-width: 575px) {
+            .calendar-day {
+                padding: 1rem;
+            }
+            .event-top {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -370,6 +503,7 @@
                     <ul class="nav-links">
                         <li><a href="/#home">Home</a></li>
                         <li><a href="/#courses">Courses</a></li>
+                        <li><a href="/#schedule">Schedule</a></li>
                         <li><a href="/#info">Information</a></li>
                         <li><a href="/apply">Apply Now</a></li>
                     </ul>
@@ -405,13 +539,6 @@
                     <div class="lecturers-grid">
                         <div class="speaker-card">
                             <div class="speaker-image">
-                                <a href="https://massimilianotancioni.site.uniroma1.it" target="_blank"><img src="assets/keynotes/Massimiliano Tancioni.png" alt="Massimiliano Tancioni" loading="lazy" onerror="this.src='assets/images/swmlogo.png'; this.style.objectFit='contain'; this.style.padding='20px';"></a>
-                            </div>
-                            <h4>Massimiliano Tancioni</h4>
-                            <p class="speaker-title">Sapienza University of Rome</p>
-                        </div>
-                        <div class="speaker-card">
-                            <div class="speaker-image">
                                 <a href="https://www.cristianocantore.com" target="_blank"><img src="assets/keynotes/Cristiano Cantore.png" alt="Cristiano Cantore" loading="lazy" onerror="this.src='assets/images/swmlogo.png'; this.style.objectFit='contain'; this.style.padding='20px';"></a>
                             </div>
                             <h4>Cristiano Cantore</h4>
@@ -429,6 +556,13 @@
                                 <a href="https://gragusa.org" target="_blank"><img src="assets/keynotes/Giusepe Ragusa.png" alt="Giuseppe Ragusa" loading="lazy" onerror="this.src='assets/images/swmlogo.png'; this.style.objectFit='contain'; this.style.padding='20px';"></a>
                             </div>
                             <h4>Giuseppe Ragusa</h4>
+                            <p class="speaker-title">Sapienza University of Rome</p>
+                        </div>
+                        <div class="speaker-card">
+                            <div class="speaker-image">
+                                <a href="https://massimilianotancioni.site.uniroma1.it" target="_blank"><img src="assets/keynotes/Massimiliano Tancioni.png" alt="Massimiliano Tancioni" loading="lazy" onerror="this.src='assets/images/swmlogo.png'; this.style.objectFit='contain'; this.style.padding='20px';"></a>
+                            </div>
+                            <h4>Massimiliano Tancioni</h4>
                             <p class="speaker-title">Sapienza University of Rome</p>
                         </div>
                     </div>
@@ -456,6 +590,51 @@
                         <!-- JS injected courses will go here -->
                     </div>
 
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule section -->
+        <section id="schedule" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Schedule</h2>
+                    <p>Daily breakdown of the summer school program</p>
+                </div>
+                <div class="section-content">
+                    <div class="schedule-container">
+                        
+                        <div class="schedule-controls">
+                            <div class="filter-group">
+                                <label for="day-filter"><i class="far fa-calendar-alt"></i> Day:</label>
+                                <select id="day-filter" class="filter-select" onchange="filterSchedule()">
+                                    <option value="all">All Dates</option>
+                                    <option value="sept7">Monday, Sept 7</option>
+                                    <option value="sept8">Tuesday, Sept 8</option>
+                                    <option value="sept9">Wednesday, Sept 9</option>
+                                    <option value="sept10">Thursday, Sept 10</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label for="course-filter"><i class="fas fa-book"></i> Course:</label>
+                                <select id="course-filter" class="filter-select" onchange="filterSchedule()">
+                                    <option value="all">All Courses</option>
+                                    <option value="cantore">HANK Models (Cantore)</option>
+                                    <option value="tancioni">Empirical Macroeconomic (Tancioni)</option>
+                                    <option value="nistico">Balance Sheet Policies (Nisticò)</option>
+                                    <option value="ragusa">Econometrics (Ragusa)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div id="schedule-calendar" class="schedule-calendar">
+                            <!-- JS injected schedule will go here -->
+                        </div>
+                        <div id="no-schedule-results" style="display: none; text-align: center; color: #666; padding: 2rem 0; background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-top: 1rem;">
+                            No sessions match the selected filters.
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>
@@ -539,6 +718,7 @@
                         <ul>
                             <li><a href="/#home">Home</a></li>
                             <li><a href="/#courses">Courses</a></li>
+                            <li><a href="/#schedule">Schedule</a></li>
                             <li><a href="/#info">Information</a></li>
                             <li><a href="/apply">Apply</a></li>
                         </ul>
@@ -639,6 +819,101 @@
             const target = document.getElementById(tabId);
             target.classList.add('active');
             target.style.display = 'flex'; // our courses-stack is a flex container
+        }
+
+        // Fetch and Render Calendar Schedule
+        async function loadSchedule() {
+            try {
+                const response = await fetch('schedule.json');
+                const scheduleData = await response.json();
+                
+                const container = document.getElementById('schedule-calendar');
+                if(!container) return;
+                container.innerHTML = '';
+                
+                // Group by dateLabel
+                const grouped = {};
+                scheduleData.forEach(item => {
+                    if(!grouped[item.dateLabel]) grouped[item.dateLabel] = [];
+                    grouped[item.dateLabel].push(item);
+                });
+
+                for(const [dayLabel, events] of Object.entries(grouped)) {
+                    const dayId = events[0].date;
+                    
+                    const dayDiv = document.createElement('div');
+                    dayDiv.className = 'calendar-day';
+                    dayDiv.setAttribute('data-day', dayId);
+                    
+                    let eventsHtml = '';
+                    events.forEach(ev => {
+                        eventsHtml += `
+                            <div class="calendar-event" data-day="${ev.date}" data-course="${ev.courseId}">
+                                <div class="event-top">
+                                    <div class="event-time-badge"><i class="far fa-clock"></i> ${ev.time}</div>
+                                    <div class="event-course-badge">${ev.courseName}</div>
+                                </div>
+                                <div class="event-title">${ev.topic}</div>
+                                <div class="event-instructor"><i class="fas fa-chalkboard-teacher"></i> ${ev.instructor}</div>
+                                <div class="event-desc">${ev.description}</div>
+                            </div>
+                        `;
+                    });
+
+                    dayDiv.innerHTML = `
+                        <div class="calendar-day-header"><i class="far fa-calendar-alt"></i> ${dayLabel}</div>
+                        <div class="calendar-events">
+                            ${eventsHtml}
+                        </div>
+                    `;
+                    container.appendChild(dayDiv);
+                }
+            } catch (error) {
+                console.error('Error loading schedule:', error);
+            }
+        }
+
+        loadSchedule();
+
+        // Filter functionality for the new Calendar View
+        function filterSchedule() {
+            const dayFilter = document.getElementById('day-filter').value;
+            const courseFilter = document.getElementById('course-filter').value;
+            
+            const allDays = document.querySelectorAll('.calendar-day');
+            let anyVisible = false;
+
+            allDays.forEach(dayBox => {
+                const events = dayBox.querySelectorAll('.calendar-event');
+                let dayHasVisibleEvent = false;
+
+                events.forEach(ev => {
+                    const evDate = ev.getAttribute('data-day');
+                    const evCourse = ev.getAttribute('data-course');
+                    
+                    const matchDay = (dayFilter === 'all' || dayFilter === evDate);
+                    const matchCourse = (courseFilter === 'all' || courseFilter === evCourse);
+                    
+                    if (matchDay && matchCourse) {
+                        ev.classList.remove('hidden');
+                        dayHasVisibleEvent = true;
+                        anyVisible = true;
+                    } else {
+                        ev.classList.add('hidden');
+                    }
+                });
+
+                if (dayHasVisibleEvent) {
+                    dayBox.style.display = 'block';
+                } else {
+                    dayBox.style.display = 'none';
+                }
+            });
+
+            const noResults = document.getElementById('no-schedule-results');
+            if (noResults) {
+                noResults.style.display = anyVisible ? 'none' : 'block';
+            }
         }
     </script>
 </body>

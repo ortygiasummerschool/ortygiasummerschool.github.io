@@ -4,7 +4,7 @@
     "title": "Monetary and Fiscal Policy in HANK",
     "instructor": "Cristiano Cantore",
     "date": "Sept 7-8",
-    "time": "6 hrs",
+    "time": "12 hrs",
     "overview": "This intensive course introduces graduate students, academics, and practitioners to the analysis of monetary and fiscal policy in heterogeneous-agent New Keynesian (HANK) models. The course explores the empirical and theoretical motivations for moving beyond representative-agent frameworks in macroeconomic policy analysis and focuses on the core policy mechanisms, the interpretation of model results, and the comparison between quantitative HANK models and tractable alternatives such as TANK (two-agents NK model) and THANK (tractable HANK model). The course combines intuition, analytical structure, quantitative analysis, and policy applications. Participants will study how heterogeneity in marginal propensities to consume, balance-sheet positions, and income risk changes the transmission of interest-rate policy, transfers, taxation, and government spending. The course also highlights when tractable models can deliver useful policy insights and when a full quantitative HANK framework is needed.",
     "learningOutcomes": "By the end of the course, participants will be able to:<ul><li>Explain why household heterogeneity matters for the transmission of monetary and fiscal policy.</li><li>Identify and interpret the main HANK transmission channels, including redistribution, cash-flow, and earnings-heterogeneity mechanisms.</li><li>Assess how transfers, taxes, government spending, and interest-rate changes affect aggregate demand in the presence of heterogeneous households.</li><li>Understand the structure of a quantitative HANK model and the logic of sequence-space Jacobian methods used to solve and analyze it.</li><li>Solve a canonical one-asset HANK model in Python and interpret its quantitative policy implications.</li><li>Compare the insights from HANK, TANK, and THANK models and evaluate when tractable approaches are sufficient for policy analysis.</li><li>Connect model-based insights to current research and real-world policy questions faced by central banks, finance ministries, and other institutions.</li></ul>",
     "topics": [
@@ -38,7 +38,7 @@
     "title": "Empirical Macroeconomic",
     "instructor": "Massimiliano Tancioni",
     "date": "Sept 7-8",
-    "time": "6 hrs",
+    "time": "12 hrs",
     "overview": "Overview Placeholder...",
     "learningOutcomes": "Outcomes Placeholder...",
     "topics": ["Topic 1", "Topic 2"],
@@ -49,7 +49,7 @@
     "title": "Balance Sheet Policies in DGE Models",
     "instructor": "Salvatore Nisticò",
     "date": "Sept 9-10",
-    "time": "6 hrs",
+    "time": "12 hrs",
     "overview": "This course examines modern monetary economics with a focus on the interaction between fiscal policy, central bank balance sheets, and macroeconomic dynamics in Dynamic General Equilibrium environments. It begins with the theoretical foundations of dynamic macroeconomic models, including the inter-temporal budget constraint and the transversality condition, which underpin government solvency and asset pricing. The course then explores the Fiscal Theory of the Price Level and Wallace neutrality to understand how the composition and valuation of government liabilities can influence price determination and the effectiveness of monetary policy. Building on these foundations, the course analyzes the role of unconventional monetary policy tools—such as large-scale asset purchases and helicopter money—and examines the conditions under which such policies may break neutrality results. Finally, the course studies monetary transmission in heterogeneous-agent frameworks, particularly Tractable HANK models, and investigates how balance-sheet adjustments and deleveraging during financial crises affect aggregate demand, financial stability, and policy effectiveness.",
     "learningOutcomes": "By the end of the course, students should be able to:<br><ul><li>Derive and interpret the inter-temporal budget constraint and the transversality condition in dynamic macroeconomic models.</li><li>Analyze the implications of the transversality condition for price level determination within the Fiscal Theory of the Price Level, and understand the critique to the FTPL.</li><li>Explain the Wallace irrelevance proposition and identify the assumptions under which open market operations are irrelevant.</li><li>Evaluate the mechanisms through which unconventional open market operations and central bank balance-sheet policies can affect the macroeconomy.</li><li>Distinguish helicopter money from other forms of monetary and fiscal policy and assess its theoretical and policy implications.</li><li>Understand the structure and policy transmission mechanisms of heterogeneous-agent New Keynesian models, particularly T-HANK frameworks.</li><li>Analyze how financial frictions, leverage, and balance-sheet adjustments shape macroeconomic outcomes during deleveraging crises.</li><li>Critically assess the interaction between monetary policy, fiscal policy, and financial stability in modern macroeconomic environments.</li></ul>",
     "topics": [
@@ -86,7 +86,7 @@
     "title": "Machine Learning for Economics",
     "instructor": "Giuseppe Ragusa",
     "date": "Sept 9-10",
-    "time": "6 hrs",
+    "time": "12 hrs",
     "overview": "This intensive course introduces graduate students and practitioners to modern machine learning methods, with a focus on applications in economics and finance. Given the breadth of topics covered, the course is necessarily selective and emphasizes intuition and practical understanding over technical details. The goal is to help participants develop a map of the field and sufficient working knowledge to use current tools and applications.<br><br>The course combines foundational topics in supervised learning with an introduction to more advanced methods, including neural networks, natural language processing (NLP), and large language models (LLMs). It also adopts a hands-on perspective, using Python (PyTorch) to illustrate (i) how machine learning models can be built and applied in practice, and (ii) how LLMs can be used effectively as coding assistants (claude-code) to accelerate workflow and experimentation.",
     "learningOutcomes": "By the end of the course, participants will be able to:<ul><li>Explain the main ideas behind supervised learning, including prediction, overfitting, regularization, and model evaluation.</li><li>Compare classical machine learning methods, including linear models, regularization methods, and tree-based approaches, in applied prediction settings.</li><li>Describe the basic logic of neural networks, including gradient descent, backpropagation, and automatic differentiation.</li><li>Discuss how modern methods for text analysis evolved from word embeddings to transformers and large language models.</li><li>Implement and interpret simple machine learning models in Python for applications in economics and finance.</li></ul>",
     "topics": [

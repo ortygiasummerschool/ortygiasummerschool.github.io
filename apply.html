@@ -350,6 +350,7 @@
                                     <!-- Courses loaded dynamically via JSON -->
                                     <div class="checkbox-item"><p style="font-size:0.9em;color:gray;"><i class="fas fa-spinner fa-spin"></i> Loading courses...</p></div>
                                 </div>
+                                <p id="course-conflict-msg" style="display:none; color:#c0392b; font-size:0.88em; margin-top:0.5rem;"><i class="fas fa-exclamation-triangle"></i> These two courses run in parallel and cannot be selected together. Your previous selection has been removed.</p>
                             </div>
 
                             
@@ -419,11 +420,30 @@
                     const customValue = `${course.title} (${course.date} | ${course.instructor})`;
                     const html = `
                         <div class="checkbox-item">
-                            <input type="checkbox" id="${id}" name="entry.1273626264" value="${customValue}">
+                            <input type="checkbox" id="${id}" name="entry.1273626264" value="${customValue}" data-date="${course.date}">
                             <label for="${id}">${course.title} <span style="font-weight:400; color:var(--text-secondary);">(${course.date} | ${course.instructor})</span></label>
                         </div>
                     `;
                     checkboxContainer.innerHTML += html;
+                });
+
+                // Conflict validation: courses sharing the same date run in parallel
+                const conflictMsg = document.getElementById('course-conflict-msg');
+                checkboxContainer.addEventListener('change', function(e) {
+                    if (!e.target.matches('input[type="checkbox"]')) return;
+                    const changedBox = e.target;
+                    conflictMsg.style.display = 'none';
+                    if (!changedBox.checked) return;
+                    const date = changedBox.dataset.date;
+                    const sameSlot = checkboxContainer.querySelectorAll(`input[type="checkbox"][data-date="${date}"]`);
+                    let conflict = false;
+                    sameSlot.forEach(box => {
+                        if (box !== changedBox && box.checked) {
+                            box.checked = false;
+                            conflict = true;
+                        }
+                    });
+                    if (conflict) conflictMsg.style.display = 'block';
                 });
             } catch (error) {
                 console.error("Error loading courses:", error);
@@ -442,6 +462,20 @@
                 if (checkedCourses.length === 0) {
                     e.preventDefault(); // Stop submission
                     alert('Please select at least one course.');
+                    return;
+                }
+
+                // Safety net: prevent parallel-slot conflicts on submit
+                const dateMap = {};
+                let conflictDate = null;
+                checkedCourses.forEach(box => {
+                    const date = box.dataset.date;
+                    if (dateMap[date]) conflictDate = date;
+                    else dateMap[date] = true;
+                });
+                if (conflictDate) {
+                    e.preventDefault();
+                    alert(`You cannot select two courses from the same time slot (${conflictDate}). Please choose only one.`);
                     return;
                 }
 

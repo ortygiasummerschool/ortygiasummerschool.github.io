@@ -174,10 +174,10 @@
     "dateLabel": "Wednesday, Sept 9",
     "time": "09:00 - 10:30",
     "courseId": "ragusa",
-    "courseName": "Econometrics",
+    "courseName": "Machine Learning for Economics",
     "instructor": "Giuseppe Ragusa",
-    "topic": "Session 1",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "topic": "Supervised learning foundations.",
+    "description": "Prediction, loss functions, overfitting, and regularization."
   },
   {
     "date": "sept9",
@@ -194,10 +194,10 @@
     "dateLabel": "Wednesday, Sept 9",
     "time": "11:00 - 12:30",
     "courseId": "ragusa",
-    "courseName": "Econometrics",
+    "courseName": "Machine Learning for Economics",
     "instructor": "Giuseppe Ragusa",
-    "topic": "Session 2",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "topic": "Linear and regularized methods.",
+    "description": "Linear and logistic regression, Ridge, Lasso, and model evaluation."
   },
   {
     "date": "sept9",
@@ -214,10 +214,10 @@
     "dateLabel": "Wednesday, Sept 9",
     "time": "14:00 - 15:30",
     "courseId": "ragusa",
-    "courseName": "Econometrics",
+    "courseName": "Machine Learning for Economics",
     "instructor": "Giuseppe Ragusa",
-    "topic": "Session 3",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "topic": "Trees, ensembles, and optimization.",
+    "description": "Tree-based methods, boosting, gradient descent, and automatic differentiation."
   },
   {
     "date": "sept9",
@@ -234,10 +234,10 @@
     "dateLabel": "Wednesday, Sept 9",
     "time": "16:00 - 17:30",
     "courseId": "ragusa",
-    "courseName": "Econometrics",
+    "courseName": "Machine Learning for Economics",
     "instructor": "Giuseppe Ragusa",
-    "topic": "Session 4",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "topic": "Neural networks.",
+    "description": "Core architectures, training, backpropagation, and regularization."
   },
   {
     "date": "sept10",
@@ -254,10 +254,10 @@
     "dateLabel": "Thursday, Sept 10",
     "time": "09:00 - 10:30",
     "courseId": "ragusa",
-    "courseName": "Econometrics",
+    "courseName": "Machine Learning for Economics",
     "instructor": "Giuseppe Ragusa",
-    "topic": "Session 5",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "topic": "Python Lab I.",
+    "description": "Deep learning with PyTorch, with examples from image data."
   },
   {
     "date": "sept10",
@@ -274,10 +274,10 @@
     "dateLabel": "Thursday, Sept 10",
     "time": "11:00 - 12:30",
     "courseId": "ragusa",
-    "courseName": "Econometrics",
+    "courseName": "Machine Learning for Economics",
     "instructor": "Giuseppe Ragusa",
-    "topic": "Session 6",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "topic": "Natural language processing.",
+    "description": "Embeddings, attention, transformers, and text as data."
   },
   {
     "date": "sept10",
@@ -294,10 +294,10 @@
     "dateLabel": "Thursday, Sept 10",
     "time": "14:00 - 15:30",
     "courseId": "ragusa",
-    "courseName": "Econometrics",
+    "courseName": "Machine Learning for Economics",
     "instructor": "Giuseppe Ragusa",
-    "topic": "Session 7",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "topic": "Large language models.",
+    "description": "GPT-style models and applications in economics and finance."
   },
   {
     "date": "sept10",
@@ -314,9 +314,9 @@
     "dateLabel": "Thursday, Sept 10",
     "time": "16:00 - 17:30",
     "courseId": "ragusa",
-    "courseName": "Econometrics",
+    "courseName": "Machine Learning for Economics",
     "instructor": "Giuseppe Ragusa",
-    "topic": "Session 8",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "topic": "Python Lab II.",
+    "description": "Building, training, and evaluating models for economic applications."
   }
 ]

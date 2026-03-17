@@ -83,13 +83,27 @@
   },
   {
     "tabId": "tab-week2",
-    "title": "Econometrics",
+    "title": "Machine Learning for Economics",
     "instructor": "Giuseppe Ragusa",
     "date": "Sept 9-10",
     "time": "6 hrs",
-    "overview": "Overview Placeholder...",
-    "learningOutcomes": "Outcomes Placeholder...",
-    "topics": ["Topic 1", "Topic 2"],
-    "references": ["Reference 1"]
+    "overview": "This intensive course introduces graduate students and practitioners to modern machine learning methods, with a focus on applications in economics and finance. Given the breadth of topics covered, the course is necessarily selective and emphasizes intuition and practical understanding over technical details. The goal is to help participants develop a map of the field and sufficient working knowledge to use current tools and applications.<br><br>The course combines foundational topics in supervised learning with an introduction to more advanced methods, including neural networks, natural language processing (NLP), and large language models (LLMs). It also adopts a hands-on perspective, using Python (PyTorch) to illustrate (i) how machine learning models can be built and applied in practice, and (ii) how LLMs can be used effectively as coding assistants (claude-code) to accelerate workflow and experimentation.",
+    "learningOutcomes": "By the end of the course, participants will be able to:<ul><li>Explain the main ideas behind supervised learning, including prediction, overfitting, regularization, and model evaluation.</li><li>Compare classical machine learning methods, including linear models, regularization methods, and tree-based approaches, in applied prediction settings.</li><li>Describe the basic logic of neural networks, including gradient descent, backpropagation, and automatic differentiation.</li><li>Discuss how modern methods for text analysis evolved from word embeddings to transformers and large language models.</li><li>Implement and interpret simple machine learning models in Python for applications in economics and finance.</li></ul>",
+    "topics": [
+      "Supervised learning and model evaluation",
+      "Regularization, trees, and ensemble methods",
+      "Optimization and neural networks",
+      "Deep learning in practice with Python and PyTorch",
+      "Natural language processing, transformers, and large language models"
+    ],
+    "references": [
+      "James, G., Witten, D., Hastie, T., & Tibshirani, R. (2021). <i>An Introduction to Statistical Learning with Applications in Python</i> (2023). Springer. <a href=\"https://hastie.su.domains/ISLP/ISLP_website.pdf.download.html\">https://hastie.su.domains/ISLP/ISLP_website.pdf.download.html</a>",
+      "Hastie, T., Tibshirani, R., & Friedman, J. (2009). <i>The Elements of Statistical Learning: Data Mining, Inference, and Prediction</i> (2nd ed.). Springer. <a href=\"https://hastie.su.domains/ElemStatLearn/download.html\">https://hastie.su.domains/ElemStatLearn/download.html</a>",
+      "Goodfellow, I., Bengio, Y., & Courville, A. (2016). <i>Deep Learning</i>. MIT Press. <a href=\"https://www.deeplearningbook.org/\">https://www.deeplearningbook.org/</a>",
+      "Jurafsky, D., & Martin, J. H. (2024). <i>Speech and Language Processing</i> (3rd ed. draft). <a href=\"https://web.stanford.edu/~jurafsky/slp3/\">https://web.stanford.edu/~jurafsky/slp3/</a>",
+      "Athey, S., & Imbens, G. W. (2019). <i>Machine Learning Methods That Economists Should Know About</i>. Annual Review of Economics, 11, 685–725.",
+      "Gentzkow, M., Kelly, B., & Taddy, M. (2019). <i>Text as Data</i>. Journal of Economic Literature, 57(3), 535–574.",
+      "Mullainathan, S., & Spiess, J. (2017). <i>Machine Learning: An Applied Econometric Approach</i>. Journal of Economic Perspectives, 31(2), 87–106."
+    ]
   }
 ]

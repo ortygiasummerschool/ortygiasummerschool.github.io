@@ -35,14 +35,37 @@
   },
   {
     "tabId": "tab-week1",
-    "title": "Empirical Macroeconomic",
+    "title": "Causal Inference for Macroeconomic Shocks",
     "instructor": "Massimiliano Tancioni",
+    "ta": "Milos Ciganovic",
     "date": "Sept 7-8",
     "time": "12 hrs",
-    "overview": "Overview Placeholder...",
-    "learningOutcomes": "Outcomes Placeholder...",
-    "topics": ["Topic 1", "Topic 2"],
-    "references": ["Reference 1"]
+    "overview": "How do we credibly measure the effects of monetary policy, fiscal shocks, energy shocks, or uncertainty shocks when the shocks themselves are not directly observed and macroeconomic variables are jointly determined over time?<br><br>This intensive course introduces graduate students and practitioners to modern methods for identifying and estimating the dynamic causal effects of macroeconomic shocks. The course focuses on two core empirical workhorses of contemporary macroeconomics—structural vector autoregressions (SVARs) and local projections (LPs)—and on the identification strategies that make causal interpretation possible, including zero restrictions, sign restrictions, external instruments, and narrative information.<br><br>The course begins with the foundations of reduced-form VARs and the classical identification problem, then progressively introduces the main strategies that the literature has developed to move from correlation to causation. A key theme throughout is that different identification strategies encode different types of prior economic knowledge, and that the choice of method should be guided by the nature of the available information about the shock of interest.<br><br>The final sessions extend the analysis to LP–IV and to high-dimensional settings with richer information sets. Practical implementation in Python is integrated throughout. A recurring theme is how LP and SVAR estimators relate, when they coincide, and how to choose between them in practice.",
+    "learningOutcomes": "By the end of the course, participants will be able to:<ul><li>formulate the identification problem for structural VARs and explain why reduced-form evidence is insufficient for causal inference;</li><li>implement and critically evaluate zero restrictions (short-run and long-run), understanding the economic assumptions they encode;</li><li>apply sign restrictions to set-identify structural shocks and interpret the resulting sets of impulse responses;</li><li>use external instruments (proxy variables) to identify structural shocks via SVAR-IV methods, and assess their relevance and credibility;</li><li>incorporate narrative information as restrictions on structural shocks and historical decompositions to sharpen identification;</li><li>estimate impulse response functions via local projections and LP–IV, and compare them with SVAR-based estimates;</li><li>choose between SVAR- and LP-based estimators in light of the identification strategy, finite-sample bias–variance trade-off, and inferential goals. Assess and communicate uncertainty using appropriate inference methods, including HAC inference, joint confidence bands, and weak-IV-robust reasoning where relevant; and</li><li>discuss the challenges of extending SVAR and LP methods to high-dimensional settings, including factor-based, penalized, and shrinkage approaches.</li></ul>",
+    "topics": [
+      "Reduced-form VARs, the structural identification problem, and point identification through zero restrictions",
+      "Set identification through sign restrictions and mixed point/set identification strategies",
+      "Proxy variables and external instruments in SVAR-IV and LP–IV settings",
+      "Narrative restrictions and the combination of multiple identification strategies",
+      "Local projections, LP–IV, LP–VAR equivalence, and current best practice for inference and estimator choice",
+      "Extensions to high-dimensional settings: factor-augmented methods, penalized estimation, and recent inference tools for dynamic causal analysis"
+    ],
+    "references": [
+      "Antolín-Díaz, J., & Rubio-Ramírez, J. F. (2018). Narrative sign restrictions for SVARs. <i>American Economic Review</i>, 108(10), 2802–2829. <a href=\"https://doi.org/10.1257/aer.20161852\">https://doi.org/10.1257/aer.20161852</a>",
+      "Bernanke, B. S., Boivin, J., & Eliasz, P. (2005). Measuring the effects of monetary policy: a factor-augmented vector autoregressive (FAVAR) approach. <i>Quarterly Journal of Economics</i>, 120(1), 387–422.",
+      "Blanchard, O. J., & Quah, D. (1989). The dynamic effects of aggregate demand and supply disturbances. <i>American Economic Review</i>, 79(4), 655–673.",
+      "Gertler, M., & Karadi, P. (2015). Monetary policy surprises, credit costs, and economic activity. <i>American Economic Journal: Macroeconomics</i>, 7(1), 44–76.",
+      "Inoue, A., Jordà, Ò., & Kuersteiner, G. M. (2026). Inference for local projections. <i>The Econometrics Journal</i>, 29(1), 2–26. <a href=\"https://doi.org/10.1093/ectj/utaf004\">https://doi.org/10.1093/ectj/utaf004</a>",
+      "Jordà, Ò. (2005). Estimation and inference of impulse responses by local projections. <i>American Economic Review</i>, 95(1), 161–182. <a href=\"https://doi.org/10.1257/0002828053828518\">https://doi.org/10.1257/0002828053828518</a>",
+      "Jordà, Ò., & Taylor, A. M. (2025). Local projections. <i>Journal of Economic Literature</i>.",
+      "Kilian, L., & Lütkepohl, H. (2017). <i>Structural Vector Autoregressive Analysis</i>. Cambridge University Press.",
+      "Mertens, K., & Ravn, M. O. (2013). The dynamic effects of personal and corporate income tax changes in the United States. <i>American Economic Review</i>, 103(4), 1212–1247.",
+      "Montiel Olea, J. L., Plagborg-Møller, M., Qian, E., & Wolf, C. K. (2025). Local projections or VARs? A primer for macroeconomists.",
+      "Plagborg-Møller, M., & Wolf, C. K. (2021). Local projections and VARs estimate the same impulse responses. <i>Econometrica</i>, 89(2), 955–980. <a href=\"https://doi.org/10.3982/ECTA17813\">https://doi.org/10.3982/ECTA17813</a>",
+      "Sims, C. A. (1980). Macroeconomics and reality. <i>Econometrica</i>, 48(1), 1–48.",
+      "Stock, J. H., & Watson, M. W. (2018). Identification and estimation of dynamic causal effects in macroeconomics using external instruments. <i>The Economic Journal</i>, 128(610), 917–948. <a href=\"https://doi.org/10.1111/ecoj.12593\">https://doi.org/10.1111/ecoj.12593</a>",
+      "Uhlig, H. (2005). What are the effects of monetary policy on output? Results from an agnostic identification procedure. <i>Journal of Monetary Economics</i>, 52(2), 381–419. <a href=\"https://doi.org/10.1016/j.jmoneco.2004.05.007\">https://doi.org/10.1016/j.jmoneco.2004.05.007</a>"
+    ]
   },
   {
     "tabId": "tab-week2",

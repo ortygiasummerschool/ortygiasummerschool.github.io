@@ -14,10 +14,11 @@
     "dateLabel": "Monday, Sept 7",
     "time": "09:00 - 10:30",
     "courseId": "tancioni",
-    "courseName": "Empirical Macroeconomic",
+    "courseName": "Causal Inference for Macroeconomic Shocks",
     "instructor": "Massimiliano Tancioni",
-    "topic": "Session 1",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "ta": "Milos Ciganovic",
+    "topic": "VARs and the identification problem.",
+    "description": "Reduced-form VARs, VMA representations, impulse responses, forecast error variance decompositions, and the mapping from reduced-form to structural parameters. The role of economic theory, timing assumptions, and institutional knowledge in achieving identification."
   },
   {
     "date": "sept7",
@@ -34,10 +35,11 @@
     "dateLabel": "Monday, Sept 7",
     "time": "11:00 - 12:30",
     "courseId": "tancioni",
-    "courseName": "Empirical Macroeconomic",
+    "courseName": "Causal Inference for Macroeconomic Shocks",
     "instructor": "Massimiliano Tancioni",
-    "topic": "Session 2",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "ta": "Milos Ciganovic",
+    "topic": "Zero and sign restrictions.",
+    "description": "Short-run (Cholesky) and long-run (Blanchard–Quah) zero restrictions. Sign restrictions as set identification: the algorithm of Rubio-Ramírez, Waggoner, and Zha (2010), interpretation of identified sets, and Uhlig (2005)'s rejection method. Narrative restrictions as economically motivated inequalities on shocks and responses."
   },
   {
     "date": "sept7",
@@ -54,10 +56,11 @@
     "dateLabel": "Monday, Sept 7",
     "time": "14:00 - 15:30",
     "courseId": "tancioni",
-    "courseName": "Empirical Macroeconomic",
+    "courseName": "Causal Inference for Macroeconomic Shocks",
     "instructor": "Massimiliano Tancioni",
-    "topic": "Session 3",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "ta": "Milos Ciganovic",
+    "topic": "External instruments and SVAR-IV.",
+    "description": "Proxy variables as noisy measures of structural shocks. The SVAR-IV approach of Stock and Watson and Mertens and Ravn. Relevance and exogeneity conditions. Identification with high-frequency surprises. Comparing proxy-based identification with zero- and sign-restricted approaches, and discussing when different strategies can be fruitfully combined."
   },
   {
     "date": "sept7",
@@ -74,10 +77,11 @@
     "dateLabel": "Monday, Sept 7",
     "time": "16:00 - 17:30",
     "courseId": "tancioni",
-    "courseName": "Empirical Macroeconomic",
+    "courseName": "Causal Inference for Macroeconomic Shocks",
     "instructor": "Massimiliano Tancioni",
-    "topic": "Session 4",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "ta": "Milos Ciganovic",
+    "topic": "Python Lab I.",
+    "description": "Practical session led by TA. Estimating reduced-form VARs and computing impulse responses. Implementing Cholesky and sign-restricted identification. Proxy SVAR estimation of monetary policy shocks using high-frequency instruments. Replication of selected results from the empirical literature."
   },
   {
     "date": "sept8",
@@ -94,10 +98,11 @@
     "dateLabel": "Tuesday, Sept 8",
     "time": "09:00 - 10:30",
     "courseId": "tancioni",
-    "courseName": "Empirical Macroeconomic",
+    "courseName": "Causal Inference for Macroeconomic Shocks",
     "instructor": "Massimiliano Tancioni",
-    "topic": "Session 5",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "ta": "Milos Ciganovic",
+    "topic": "Local projections.",
+    "description": "The Jordà (2005) LP estimator as a direct, regression-based alternative to VARs. Robustness to misspecification. HAC inference, confidence intervals, and smooth local projections. LP vs. VAR: the Plagborg-Møller and Wolf (2021) equivalence result and its implications for applied work."
   },
   {
     "date": "sept8",
@@ -114,10 +119,11 @@
     "dateLabel": "Tuesday, Sept 8",
     "time": "11:00 - 12:30",
     "courseId": "tancioni",
-    "courseName": "Empirical Macroeconomic",
+    "courseName": "Causal Inference for Macroeconomic Shocks",
     "instructor": "Massimiliano Tancioni",
-    "topic": "Session 6",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "ta": "Milos Ciganovic",
+    "topic": "LP–IV, SVAR–IV, and inference.",
+    "description": "Identification via external instruments in local projections. The connection between LP–IV and SVAR–IV assumptions. Invertibility, weak-instrument concerns, and the role of inference in comparing dynamic causal estimates across methods. State-dependent impulse responses and nonlinear extensions."
   },
   {
     "date": "sept8",
@@ -134,10 +140,11 @@
     "dateLabel": "Tuesday, Sept 8",
     "time": "14:00 - 15:30",
     "courseId": "tancioni",
-    "courseName": "Empirical Macroeconomic",
+    "courseName": "Causal Inference for Macroeconomic Shocks",
     "instructor": "Massimiliano Tancioni",
-    "topic": "Session 7",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "ta": "Milos Ciganovic",
+    "topic": "High-dimensional extensions.",
+    "description": "The curse of dimensionality in dynamic systems. Factor-augmented methods (FAVARs), penalized estimation, shrinkage, and recent tools for inference on impulse responses in large information environments. Large SVARs, dimensionality reduction, and computational issues."
   },
   {
     "date": "sept8",
@@ -154,10 +161,11 @@
     "dateLabel": "Tuesday, Sept 8",
     "time": "16:00 - 17:30",
     "courseId": "tancioni",
-    "courseName": "Empirical Macroeconomic",
+    "courseName": "Causal Inference for Macroeconomic Shocks",
     "instructor": "Massimiliano Tancioni",
-    "topic": "Session 8",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "ta": "Milos Ciganovic",
+    "topic": "Python Lab II.",
+    "description": "Practical session led by TA. LP and LP–IV estimation of impulse responses. Comparing LP–IV and SVAR–IV estimates on the same dataset. State-dependent local projections. Working with richer datasets and factor-augmented specifications. Replication of selected empirical results."
   },
   {
     "date": "sept9",

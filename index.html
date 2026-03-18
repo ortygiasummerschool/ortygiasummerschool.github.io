@@ -619,10 +619,10 @@
                                 <label for="course-filter"><i class="fas fa-book"></i> Course:</label>
                                 <select id="course-filter" class="filter-select" onchange="filterSchedule()">
                                     <option value="all">All Courses</option>
-                                    <option value="cantore">HANK Models (Cantore)</option>
-                                    <option value="tancioni">Empirical Macroeconomic (Tancioni)</option>
-                                    <option value="nistico">Balance Sheet Policies (Nisticò)</option>
-                                    <option value="ragusa">Econometrics (Ragusa)</option>
+                                    <option value="cantore">Monetary and Fiscal Policy in HANK (Cantore)</option>
+                                    <option value="tancioni">Causal Inference for Macroeconomic Shocks (Tancioni)</option>
+                                    <option value="nistico">Balance Sheet Policies in DGE Models (Nisticò)</option>
+                                    <option value="ragusa">Machine Learning for Economics (Ragusa)</option>
                                 </select>
                             </div>
                         </div>
@@ -751,6 +751,7 @@
                                 <div class="course-title-area">
                                     <h3>${course.title}</h3>
                                     <div class="course-instructor">Instructor: ${course.instructor}</div>
+                                    ${course.ta ? `<div class="course-instructor">Teaching Assistant: ${course.ta}</div>` : ''}
                                 </div>
                                 <div class="course-meta">
                                     <div class="course-meta-item"><i class="far fa-calendar-alt"></i> ${course.date}</div>
@@ -854,7 +855,7 @@
                                     <div class="event-course-badge">${ev.courseName}</div>
                                 </div>
                                 <div class="event-title">${ev.topic}</div>
-                                <div class="event-instructor"><i class="fas fa-chalkboard-teacher"></i> ${ev.instructor}</div>
+                                <div class="event-instructor"><i class="fas fa-chalkboard-teacher"></i> ${ev.ta && ev.topic.startsWith('Python Lab') ? ev.ta : ev.instructor}</div>
                                 <div class="event-desc">${ev.description}</div>
                             </div>
                         `;

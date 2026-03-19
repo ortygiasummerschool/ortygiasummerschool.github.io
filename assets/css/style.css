@@ -535,6 +535,65 @@ p {
     text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
 }
 
+.deadline-notice {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding: 0.7rem 1.75rem;
+    border-radius: 50px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.deadline-notice > i {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+}
+
+.deadline-notice > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.deadline-date {
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    color: var(--text-primary);
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.6);
+}
+
+.deadline-note {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-top: 0.15rem;
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.6);
+}
+
+/* Apply page deadline styling (white bg context) */
+.section-header .deadline-notice {
+    background: rgba(var(--primary-color-rgb), 0.06);
+    border: 1px solid rgba(var(--primary-color-rgb), 0.2);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.section-header .deadline-date {
+    color: var(--primary-dark);
+    text-shadow: none;
+}
+
+.section-header .deadline-note {
+    text-shadow: none;
+}
+
 .hero-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -1465,7 +1524,10 @@ p {
 
 @media (min-width: 992px) {
     .info-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .info-card {
@@ -1854,8 +1916,12 @@ footer::before {
 
 /* Large laptops and desktops */
 @media (min-width: 992px) {
-    .topics-grid, .speakers-grid, .info-grid {
+    .topics-grid, .speakers-grid {
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
     
     .footer-links {

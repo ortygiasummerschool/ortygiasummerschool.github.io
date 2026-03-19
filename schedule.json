@@ -174,8 +174,8 @@
     "courseId": "nistico",
     "courseName": "Balance Sheet Policies in DGE Models",
     "instructor": "Salvatore Nistic\u00f2",
-    "topic": "Session 1",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "topic": "Dynamic Foundations: Budget Constraints & Transversality.",
+    "description": "Intertemporal budget constraint, Transversality condition, Government solvency."
   },
   {
     "date": "sept9",
@@ -194,8 +194,8 @@
     "courseId": "nistico",
     "courseName": "Balance Sheet Policies in DGE Models",
     "instructor": "Salvatore Nistic\u00f2",
-    "topic": "Session 2",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "topic": "Fiscal Theory of the Price Level (FTPL) — Foundations.",
+    "description": "Price level determination, Government valuation equation, Active fiscal / passive monetary."
   },
   {
     "date": "sept9",
@@ -214,8 +214,8 @@
     "courseId": "nistico",
     "courseName": "Balance Sheet Policies in DGE Models",
     "instructor": "Salvatore Nistic\u00f2",
-    "topic": "Session 3",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "topic": "Fiscal Theory of the Price Level — Critiques & Extensions.",
+    "description": "Critique of FTPL, Off-equilibrium reasoning, Debt maturity structure."
   },
   {
     "date": "sept9",
@@ -234,8 +234,8 @@
     "courseId": "nistico",
     "courseName": "Balance Sheet Policies in DGE Models",
     "instructor": "Salvatore Nistic\u00f2",
-    "topic": "Session 4",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "topic": "Wallace Neutrality & Open Market Operations.",
+    "description": "Wallace (1981), Irrelevance of OMOs, Assumptions driving neutrality."
   },
   {
     "date": "sept9",
@@ -254,8 +254,8 @@
     "courseId": "nistico",
     "courseName": "Balance Sheet Policies in DGE Models",
     "instructor": "Salvatore Nistic\u00f2",
-    "topic": "Session 5",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "topic": "Non-Neutrality of Unconventional Open Market Operations.",
+    "description": "Large-scale asset purchases, Portfolio balance channel, Breaking Wallace neutrality."
   },
   {
     "date": "sept10",
@@ -274,8 +274,8 @@
     "courseId": "nistico",
     "courseName": "Balance Sheet Policies in DGE Models",
     "instructor": "Salvatore Nistic\u00f2",
-    "topic": "Session 6",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "topic": "Helicopter Money & Central Bank Balance-Sheet Policy.",
+    "description": "Helicopter money, Fiscal vs monetary policy boundary, Central bank solvency."
   },
   {
     "date": "sept10",
@@ -294,8 +294,8 @@
     "courseId": "nistico",
     "courseName": "Balance Sheet Policies in DGE Models",
     "instructor": "Salvatore Nistic\u00f2",
-    "topic": "Session 7",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "topic": "Unconventional Policy in Heterogeneous-Agent NK Models (T-HANK).",
+    "description": "T-HANK framework, Household heterogeneity, Monetary transmission with inequality."
   },
   {
     "date": "sept10",
@@ -314,8 +314,8 @@
     "courseId": "nistico",
     "courseName": "Balance Sheet Policies in DGE Models",
     "instructor": "Salvatore Nistic\u00f2",
-    "topic": "Session 8",
-    "description": "Detailed syllabus schedule to be uploaded."
+    "topic": "Balance Sheets, Deleveraging Crises & Financial Stability.",
+    "description": "Financial frictions, Leverage cycles, Deleveraging & aggregate demand."
   },
   {
     "date": "sept10",
